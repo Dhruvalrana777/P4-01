@@ -1,99 +1,108 @@
+<!-- DEVELOPER: Dhruval Rana, IS117-xxx, Fall 2025 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My First Bootstrap Page</title>
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>ShopEasy | Home</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-
 </head>
 <body>
-<div class="container-fluid">
-    <div class="row">
-            <nav class="navbar navbar-expand-md
-                    justify-content-start
-                    bg-dark navbar-dark
-                    col-12">
 
-                <!-- Brand -->
-                <a class="navbar-brand" href="index.html">ShopEasy</a>
-                <!-- Responsive Button for the smaller menu -->
-                <button class="navbar-toggler" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <!-- Links -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 1</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 2</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link 3</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
+<!-- NAV -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fs-2 fw-bold text-warning" href="index.html">ShopEasy</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                <!-- Dropdown with 2-tier submenu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productsDrop" data-bs-toggle="dropdown">Products</a>
+                    <ul class="dropdown-menu" aria-labelledby="productsDrop">
+                        <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+
+                        <!-- Submenu: Clothing -> Subpage below it -->
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="#">Clothing</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="clothing.html">All Clothing</a></li>
+                                <li><a class="dropdown-item" href="clothing.html#tops">Tops</a></li>
+                            </ul>
                         </li>
 
-                        <!-- Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop"
-                               data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Education
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Link 1</a>
-                                <a class="dropdown-item" href="#">Link 2</a>
-                                <a class="dropdown-item" href="#">Link 3</a>
-                                <a class="dropdown-item" href="#">Link 4</a>
-                                <a class="dropdown-item" href="#">Link 5</a>
-
-                            </div>
-                        </li>
                     </ul>
-                </div>
-            </nav>
-        <div class="row">
-        <p class="col-1">Col 1</p>
-        <p class="col-1">Col 2</p>
-        <p class="col-1">Col 3</p>
-        <p class="col-1">Col 4</p>
-        <p class="col-1">Col 5</p>
-        <p class="col-1">Col 6</p>
-        <p class="col-1">Col 7</p>
-        <p class="col-1">Col 8</p>
-        <p class="col-1">Col 9</p>
-        <p class="col-1">Col 10</p>
-        <p class="col-1">Col 11</p>
-        <p class="col-1">Col 12</p>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    <div class="col-sm-4  text-center">
-        <h2>h2 Bootstrap heading (24px)</h2>
-        <h3>h2 Bootstrap heading (18px)</h3>
     </div>
-</div>
- <footer class="footer page-footer font-small ">
-     <div class="container">
-        <div class="row">
-            <span class="text-muted">&copy; Art Hendela, 2021 |  Terms Of Use  |  Privacy Statement</span>
+</nav>
+
+<!-- HERO (homepage-only) -->
+<header class="home-hero d-flex align-items-center text-light">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">ShopEasy - Find What You Love</h1>
+        <p class="lead">Curated goods at honest prices. Responsive, modern, and student-built.</p>
+    </div>
+</header>
+
+<!-- CARDS GRID (required) -->
+<main class="container my-5">
+    <h2 class="mb-4 text-center">Featured</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/item1.jpg" class="card-img-top" alt="Featured product 1">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Featured Product One</h5>
+                    <p class="card-text">Short description that teases the product benefits.</p>
+                    <a href="#" class="btn btn-primary mt-auto">View</a>
+                </div>
+            </div>
         </div>
-     </div>
-  </footer>
-</div>
 
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/item2.jpg" class="card-img-top" alt="Featured product 2">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Featured Product Two</h5>
+                    <p class="card-text">Short description that teases the product benefits.</p>
+                    <a href="#" class="btn btn-primary mt-auto">View</a>
+                </div>
+            </div>
+        </div>
 
-    <!-- Javascript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous">
-</script>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img src="images/item3.jpg" class="card-img-top" alt="Featured product 3">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Featured Product Three</h5>
+                    <p class="card-text">Short description that teases the product benefits.</p>
+                    <a href="#" class="btn btn-primary mt-auto">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
+<!-- FOOTER (sticky) -->
+<footer class="footer">
+    <div class="container text-center py-2">
+        <span>&copy; Dhruval Rana 2025 | Terms of Use | Privacy Statement</span>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

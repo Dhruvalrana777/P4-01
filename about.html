@@ -1,0 +1,166 @@
+<!-- DEVELOPER: Dhruval Rana, IS117-xxx, Fall 2025 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us | ShopEasy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="about-page">
+
+<!-- NAVBAR (Keeps menu at the top on every page) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand fs-4 text-warning" href="index.html">ShopEasy</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+                <!-- Dropdown with Submenu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+
+                        <li class="dropdown-submenu">
+                            <a class="dropdown-item" href="#">Clothing ▸</a>
+                            <ul class="submenu dropdown-menu">
+                                <li><a class="dropdown-item" href="clothing.html">Men</a></li>
+                                <li><a class="dropdown-item" href="clothing.html#women">Women</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE BANNER -->
+<section class="interior-banner">
+    <div class="container">
+        <h1>About ShopEasy</h1>
+        <p class="lead mt-2">A modern shopping experience built with clean, responsive design.</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main class="container py-5">
+
+    <!-- Who We Are -->
+    <section class="mb-5">
+        <h2 class="mb-3 fw-bold text-center">Who We Are</h2>
+        <p class="text-center mx-auto" style="max-width: 750px;">
+            ShopEasy is a simple but professionally designed e-commerce site created for educational
+            and development purposes. Built entirely with Bootstrap 5, it showcases responsive design,
+            clean UI layout, and a user-friendly structure suitable for modern web development.
+        </p>
+    </section>
+
+    <!-- Mission + Image -->
+    <section class="row g-4 align-items-center mb-5">
+        <div class="col-md-6">
+            <img src="images/about-store.jpg" class="rounded shadow-sm w-100" alt="ShopEasy interface preview">
+        </div>
+
+        <div class="col-md-6">
+            <h3 class="fw-bold mb-3">Our Mission</h3>
+            <p>
+                Our mission is to deliver an intuitive online shopping experience with smooth navigation,
+                responsive sections, and visually appealing product displays. Whether you're browsing items or
+                contacting support, the layout remains clear and easy to use.
+            </p>
+
+            <h3 class="fw-bold mt-4 mb-3">Our Story</h3>
+            <p>
+                ShopEasy was developed as part of a web development project to refine skills in Bootstrap,
+                UX design, responsive layouts, and multi-page site structure. Every section—from the homepage
+                hero to the dropdown menu—was crafted with attention to detail.
+            </p>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="mb-5">
+        <h2 class="fw-bold text-center mb-4">Our Core Values</h2>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Simplicity</h4>
+                        <p>A clean interface that anyone can browse easily without confusion or clutter.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Responsiveness</h4>
+                        <p>The entire site adapts seamlessly on mobile, tablet, and desktop screens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Quality Design</h4>
+                        <p>Readable fonts, smooth spacing, strong color contrast, and accessible layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer -->
+    <section class="mb-5">
+        <h2 class="fw-bold text-center mb-4">What We Offer</h2>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item">✔ Modern Bootstrap layout</li>
+                    <li class="list-group-item">✔ Fully responsive pages</li>
+                    <li class="list-group-item">✔ Multi-level navigation menu</li>
+                    <li class="list-group-item">✔ Styled product cards</li>
+                    <li class="list-group-item">✔ Detailed About, FAQ, and Contact pages</li>
+                    <li class="list-group-item">✔ GitHub Pages ready structure</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <img src="images/about-team.jpg" class="rounded shadow-sm w-100" alt="Team collaborating on design">
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        © 2025 ShopEasy · All Rights Reserved · Terms of Use
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

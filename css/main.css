@@ -1,11 +1,187 @@
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: aliceblue;
-    color: white;
+/* DEVELOPER: Dhruval Rana, IS117-xxx, Fall 2025 */
+
+/* ------------------------------
+   GLOBAL PAGE SETTINGS
+------------------------------ */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    line-height: 1.55;
+    color: #222;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Improve basic text readability */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* ------------------------------
+   HOMEPAGE HERO
+------------------------------ */
+.home-hero {
+    height: 50vh;
+    background: linear-gradient(to bottom right, #13223a 0%, #284a7f 60%),
+    url('../images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 10px;
-    font-size: 1.5rem;
+    color: white;
+    padding: 2rem;
+}
+
+/* Large hero text */
+.home-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+/* ------------------------------
+   INTERIOR PAGE BANNERS
+------------------------------ */
+.interior-banner {
+    background: #eef2f6;
+    border-bottom: 1px solid #d8dfe6;
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.interior-banner h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #1e2c3a;
+}
+
+/* ------------------------------
+   PAGE-SPECIFIC COLOR THEMES
+   (Add class to <body>):
+   <body class="electronics-page">
+------------------------------ */
+
+/* Electronics page theme */
+.electronics-page .interior-banner {
+    background: #e8f0ff;
+    border-color: #c8d9ff;
+}
+
+/* Clothing page theme */
+.clothing-page .interior-banner {
+    background: #fff1f7;
+    border-color: #ffd1e6;
+}
+
+/* FAQ page theme */
+.faq-page .interior-banner {
+    background: #f0fff4;
+    border-color: #ccf1dd;
+}
+
+/* Contact page theme */
+.contact-page .interior-banner {
+    background: #fffced;
+    border-color: #f2e5ba;
+}
+
+/* ------------------------------
+   CARDS (Consistent professional design)
+------------------------------ */
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 230px;
+}
+
+@media (max-width: 767px) {
+    .card-img-top { height: 180px; }
+}
+
+/* ------------------------------
+   FOOTER (Proper sticky footer - not fixed)
+------------------------------ */
+.footer {
+    flex-shrink: 0;
+    background-color: aliceblue;
+    border-top: 2px solid #cbd5e1;
+    padding: 16px;
+    text-align: center;
+    font-size: 1rem;
+    color: #222;
+}
+
+/* ------------------------------
+   2-TIER DROPDOWN MENU SUPPORT
+------------------------------ */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 10rem;
+    display: none;
+    background: white;
+    border: 1px solid #ddd;
+}
+
+.dropdown-submenu:hover > .submenu,
+.dropdown-submenu:focus-within > .submenu {
+    display: block;
+    z-index: 2000;
+}
+
+/* ------------------------------
+   FORM ENHANCEMENTS
+------------------------------ */
+form .form-control,
+form .form-select {
+    border-radius: 8px;
+}
+
+form button[type="submit"] {
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-weight: 600;
+}
+
+/* ------------------------------
+   RESPONSIVE TWEAKS
+------------------------------ */
+@media (max-width: 768px) {
+    .home-hero {
+        height: 38vh;
+        padding: 1.5rem;
+    }
+    .home-hero h1 {
+        font-size: 2.2rem;
+    }
 }
