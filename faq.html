@@ -5,23 +5,36 @@
     <meta charset="utf-8">
     <title>ShopEasy | FAQ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand fs-4 text-warning" href="index.html">ShopEasy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu6">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navMenu6">
+
+        <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="electronics.html">Electronics</a></li>
-                <li class="nav-item"><a class="nav-link" href="clothing.html">Clothing</a></li>
+
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                        <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                        <li><a class="dropdown-item" href="clothing.html">Clothing</a></li>
+                    </ul>
+                </li>
+
                 <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -29,6 +42,7 @@
     </div>
 </nav>
 
+<!-- PAGE BANNER -->
 <section class="interior-banner py-3 text-center">
     <div class="container">
         <h2>Frequently Asked Questions</h2>
@@ -36,8 +50,11 @@
     </div>
 </section>
 
+<!-- MAIN FAQ -->
 <main class="container my-4">
     <div class="accordion" id="faqAccordion">
+
+        <!-- Q1 -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="qOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
@@ -45,10 +62,13 @@
                 </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">This is a demo site for IS117. Use the navigation to browse pages and inspect the files for development notes.</div>
+                <div class="accordion-body">
+                    This is a demo site for IS117. Use the navigation to browse pages and review the structure for development and design reference.
+                </div>
             </div>
         </div>
 
+        <!-- Q2 -->
         <div class="accordion-item">
             <h2 class="accordion-header" id="qTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
@@ -56,18 +76,137 @@
                 </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Place images in the /images folder and reference them from the HTML pages. Use descriptive alt attributes for accessibility.</div>
+                <div class="accordion-body">
+                    All images are located inside the <strong>/images</strong> folder. Reference them in your HTML using the correct relative path, and always add a descriptive <code>alt</code> attribute for accessibility.
+                </div>
             </div>
         </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                    How do I edit the navigation menu?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    The navigation menu is located at the top of each page within a <code>&lt;nav&gt;</code> Bootstrap component. Edit or add menu links by updating the <code>.navbar-nav</code> list in each HTML file.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                    Can I add more product categories?
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes! Create a new page (e.g., <strong>sports.html</strong>), then add it to the Products dropdown in the navigation.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                    How do I customize the site's colors and styles?
+                </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Edit <strong>css/main.css</strong> to override Bootstrap defaults or apply custom styling. You can adjust colors, spacing, fonts, and other visual elements.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                    Why is my dropdown not working?
+                </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Ensure you included the Bootstrap <strong>bundle JS</strong> file at the bottom of your page:
+                    <pre class="mb-0">&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                    How do I add new images to the product cards?
+                </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Upload your image to <strong>/images</strong>, then update the <code>&lt;img src="images/your-file.jpg"&gt;</code> inside the product card. Make sure the image is optimized for web.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qEight">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                    Can I reuse this project for another course?
+                </button>
+            </h2>
+            <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Yes — the site is structured so you can expand it into more advanced projects such as full-stack development or dynamic content.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                    How do I make the site mobile-friendly?
+                </button>
+            </h2>
+            <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    The site already uses Bootstrap's responsive grid. Use <code>class="img-fluid"</code> for images and test layouts in browser dev tools.
+                </div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="qTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
+                    How do I update links when I add new pages?
+                </button>
+            </h2>
+            <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Update all navigation menus across pages to keep them consistent. Copy the updated navbar to each page.
+                </div>
+            </div>
+        </div>
+
     </div>
 </main>
 
-<footer class="footer">
-    <div class="container text-center py-2">
+<!-- FOOTER -->
+<footer class="footer text-center py-2 bg-dark text-light">
+    <div class="container">
         <span>&copy; Dhruval Rana 2025 | Terms of Use | Privacy Statement</span>
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
